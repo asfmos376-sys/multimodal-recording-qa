@@ -1,0 +1,22 @@
+﻿Recording,Take status,Stream,Samples,Largest gap (ms),Offset (ms),Drift (ms),Issues
+clean.json,pass,video,181,33.33333333333394,,,
+clean.json,pass,tactile,601,10,0,0,
+clean.json,pass,emg,3001,2,0,0,
+drift.json,review,video,181,33.33333333333394,,,
+drift.json,review,tactile,601,10,0,0,
+drift.json,review,emg,3001,2.016000000000531,84.0,40.0,"clock_offset, clock_drift"
+dropout.json,review,video,181,33.33333333333394,,,
+dropout.json,review,tactile,580,220,0,0,sample_gap
+dropout.json,review,emg,3001,2,0,0,
+markers.json,review,video,181,33.33333333333394,,,invalid_sync_markers
+markers.json,review,tactile,601,10,,,video_reference_unavailable
+markers.json,review,emg,3001,2,,,video_reference_unavailable
+missing.json,review,video,181,33.33333333333394,,,
+missing.json,review,tactile,601,10,0,0,
+missing.json,review,emg,,,,,missing_stream
+mixed.json,review,video,181,33.33333333333394,,,
+mixed.json,review,tactile,580,220,0,0,sample_gap
+mixed.json,review,emg,3001,2.016000000000531,84.0,40.0,"clock_offset, clock_drift"
+order.json,review,video,181,33.33333333333394,,,
+order.json,review,tactile,601,20,0,0,timestamp_order
+order.json,review,emg,3001,2,0,0,

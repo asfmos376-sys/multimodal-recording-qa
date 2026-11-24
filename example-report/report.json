@@ -1,0 +1,282 @@
+{
+  "thresholds": {
+    "gap_factor": 2.5,
+    "offset_ms": 50,
+    "drift_ms": 20
+  },
+  "recordings": [
+    {
+      "recording": "clean.json",
+      "status": "pass",
+      "streams": {
+        "video": {
+          "metrics": {
+            "samples": 181,
+            "largest_gap_ms": 33.33333333333394
+          },
+          "issues": []
+        },
+        "tactile": {
+          "metrics": {
+            "samples": 601,
+            "largest_gap_ms": 10,
+            "offset_ms": 0,
+            "drift_ms": 0
+          },
+          "issues": []
+        },
+        "emg": {
+          "metrics": {
+            "samples": 3001,
+            "largest_gap_ms": 2,
+            "offset_ms": 0,
+            "drift_ms": 0
+          },
+          "issues": []
+        }
+      }
+    },
+    {
+      "recording": "drift.json",
+      "status": "review",
+      "streams": {
+        "video": {
+          "metrics": {
+            "samples": 181,
+            "largest_gap_ms": 33.33333333333394
+          },
+          "issues": []
+        },
+        "tactile": {
+          "metrics": {
+            "samples": 601,
+            "largest_gap_ms": 10,
+            "offset_ms": 0,
+            "drift_ms": 0
+          },
+          "issues": []
+        },
+        "emg": {
+          "metrics": {
+            "samples": 3001,
+            "largest_gap_ms": 2.016000000000531,
+            "offset_ms": 84.0,
+            "drift_ms": 40.0
+          },
+          "issues": [
+            {
+              "code": "clock_offset",
+              "measured_ms": 84.0
+            },
+            {
+              "code": "clock_drift",
+              "measured_ms": 40.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "recording": "dropout.json",
+      "status": "review",
+      "streams": {
+        "video": {
+          "metrics": {
+            "samples": 181,
+            "largest_gap_ms": 33.33333333333394
+          },
+          "issues": []
+        },
+        "tactile": {
+          "metrics": {
+            "samples": 580,
+            "largest_gap_ms": 220,
+            "offset_ms": 0,
+            "drift_ms": 0
+          },
+          "issues": [
+            {
+              "code": "sample_gap",
+              "count": 1,
+              "largest_ms": 220,
+              "locations": [
+                {
+                  "from_ms": 2590,
+                  "to_ms": 2810,
+                  "duration_ms": 220
+                }
+              ]
+            }
+          ]
+        },
+        "emg": {
+          "metrics": {
+            "samples": 3001,
+            "largest_gap_ms": 2,
+            "offset_ms": 0,
+            "drift_ms": 0
+          },
+          "issues": []
+        }
+      }
+    },
+    {
+      "recording": "markers.json",
+      "status": "review",
+      "streams": {
+        "video": {
+          "metrics": {
+            "samples": 181,
+            "largest_gap_ms": 33.33333333333394
+          },
+          "issues": [
+            {
+              "code": "invalid_sync_markers"
+            }
+          ]
+        },
+        "tactile": {
+          "metrics": {
+            "samples": 601,
+            "largest_gap_ms": 10
+          },
+          "issues": [
+            {
+              "code": "video_reference_unavailable"
+            }
+          ]
+        },
+        "emg": {
+          "metrics": {
+            "samples": 3001,
+            "largest_gap_ms": 2
+          },
+          "issues": [
+            {
+              "code": "video_reference_unavailable"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "recording": "missing.json",
+      "status": "review",
+      "streams": {
+        "video": {
+          "metrics": {
+            "samples": 181,
+            "largest_gap_ms": 33.33333333333394
+          },
+          "issues": []
+        },
+        "tactile": {
+          "metrics": {
+            "samples": 601,
+            "largest_gap_ms": 10,
+            "offset_ms": 0,
+            "drift_ms": 0
+          },
+          "issues": []
+        },
+        "emg": {
+          "metrics": {},
+          "issues": [
+            {
+              "code": "missing_stream"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "recording": "mixed.json",
+      "status": "review",
+      "streams": {
+        "video": {
+          "metrics": {
+            "samples": 181,
+            "largest_gap_ms": 33.33333333333394
+          },
+          "issues": []
+        },
+        "tactile": {
+          "metrics": {
+            "samples": 580,
+            "largest_gap_ms": 220,
+            "offset_ms": 0,
+            "drift_ms": 0
+          },
+          "issues": [
+            {
+              "code": "sample_gap",
+              "count": 1,
+              "largest_ms": 220,
+              "locations": [
+                {
+                  "from_ms": 2590,
+                  "to_ms": 2810,
+                  "duration_ms": 220
+                }
+              ]
+            }
+          ]
+        },
+        "emg": {
+          "metrics": {
+            "samples": 3001,
+            "largest_gap_ms": 2.016000000000531,
+            "offset_ms": 84.0,
+            "drift_ms": 40.0
+          },
+          "issues": [
+            {
+              "code": "clock_offset",
+              "measured_ms": 84.0
+            },
+            {
+              "code": "clock_drift",
+              "measured_ms": 40.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "recording": "order.json",
+      "status": "review",
+      "streams": {
+        "video": {
+          "metrics": {
+            "samples": 181,
+            "largest_gap_ms": 33.33333333333394
+          },
+          "issues": []
+        },
+        "tactile": {
+          "metrics": {
+            "samples": 601,
+            "largest_gap_ms": 20,
+            "offset_ms": 0,
+            "drift_ms": 0
+          },
+          "issues": [
+            {
+              "code": "timestamp_order",
+              "count": 1
+            }
+          ]
+        },
+        "emg": {
+          "metrics": {
+            "samples": 3001,
+            "largest_gap_ms": 2,
+            "offset_ms": 0,
+            "drift_ms": 0
+          },
+          "issues": []
+        }
+      }
+    }
+  ]
+}
